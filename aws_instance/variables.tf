@@ -59,3 +59,7 @@ variable "instance_tags" {
     Environment = "DEV"
   }
 }
+
+variable "ssh_key" {
+  description = "SSH key pair for instance"
+}

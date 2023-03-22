@@ -4,7 +4,7 @@ resource "aws_instance" "this" {
   availability_zone = var.azs
   security_groups   = [var.security_group_id]
   subnet_id         = var.public_subnet_id
-  key_name          = ""
+  key_name          = var.ssh_key
 
   root_block_device {
     volume_size = var.root_block_size
