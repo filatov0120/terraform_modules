@@ -62,4 +62,5 @@ variable "instance_tags" {
 
 variable "ssh_key" {
   description = "SSH key pair for instance"
+  type        = string
 }
