@@ -60,21 +60,6 @@ variable "common_tags" {
   }
 }
 
-variable "instance_profile" {
-  type    = string
-  default = null
-}
-
-variable "security_group_id" {
-  description = "The ID of VPC in which to create ec2 instance."
-  default     = ["sg-0ba3b913fde198637"]
-}
-
-variable "subnet_id" {
-  description = "Public subnet ID"
-  default     = "subnet-0af200c6a05bc6356"
-}
-
 variable "instance_tags" {
   description = "Common tags to apply resourses"
   type        = map(any)
