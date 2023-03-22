@@ -50,16 +50,6 @@ variable "public_subnet_id" {
   description = "Public subnet ID"
 }
 
-variable "common_tags" {
-  description = "Common tags to apply resourses"
-  type        = map(any)
-  default = {
-    Name        = "Host"
-    Project     = "OMOMO"
-    Environment = "DEV"
-  }
-}
-
 variable "instance_tags" {
   description = "Common tags to apply resourses"
   type        = map(any)
