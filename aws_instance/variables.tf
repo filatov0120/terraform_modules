@@ -75,7 +75,7 @@ variable "subnet_id" {
   default     = "subnet-0af200c6a05bc6356"
 }
 
-variable "common_tags" {
+variable "instance_tags" {
   description = "Common tags to apply resourses"
   type        = map(any)
   default = {

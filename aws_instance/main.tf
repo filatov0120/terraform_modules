@@ -11,7 +11,7 @@ resource "aws_instance" "this" {
     volume_type = var.root_volume_type
   }
 
-  tags = merge(var.common_tags, {
+  tags = merge(var.instance_tags, {
     Name = var.instance_name
   })
 }

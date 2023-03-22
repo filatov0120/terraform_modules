@@ -27,7 +27,7 @@ variable "proj_name" {
   default     = "OMOMO"
 }
 
-variable "common_tags" {
+variable "vpc_tags" {
   description = "Common tags to apply to all resourses"
   type        = map(any)
   default = {
