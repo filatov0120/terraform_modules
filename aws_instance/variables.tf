@@ -8,6 +8,11 @@ variable "azs" {
   default     = "us-east-1a"
 }
 
+variable "ami" {
+  description = "ami for instance"
+  type        = string
+}
+
 variable "instance_name" {
   description = "My instance's name"
   type        = string
