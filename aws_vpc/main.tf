@@ -22,7 +22,10 @@ resource "aws_subnet" "private_subnet" {
 
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
-  tags   = merge(var.vpc_tags, { Name = "${var.proj_name}_vpc_igw" })
+  depends_on = [
+    aws_subnet.public_subnet
+  ]
+  tags = merge(var.vpc_tags, { Name = "${var.proj_name}_vpc_igw" })
 }
 
 resource "aws_route_table" "igw_rt" {
