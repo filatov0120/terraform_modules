@@ -24,3 +24,4 @@ resource "aws_eip" "this" {
     Name = "${var.instance_name}-EIP"
   })
 }
+
