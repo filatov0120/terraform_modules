@@ -19,4 +19,8 @@ resource "aws_instance" "this" {
 resource "aws_eip" "this" {
   instance = aws_instance.this.id
   vpc      = true
+
+  tags = merge(var.instance_tags, {
+    Name = "${var.instance_name}-EIP"
+  })
 }
