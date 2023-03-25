@@ -35,7 +35,7 @@ resource "aws_route_table" "igw_rt" {
   tags = merge(var.vpc_tags, { Name = "RT_to_igw_for_${var.proj_name}" })
 }
 
-resource "aws_route_table_association" "public_subnet_asso" {
+resource "aws_route_table_association" "subnet_asso" {
   subnet_id      = aws_subnet.private_subnet.id
   route_table_id = aws_route_table.igw_rt.id
 }
