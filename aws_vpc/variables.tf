@@ -39,19 +39,19 @@ variable "vpc_tags" {
 variable "cidr_vpc" {
   description = "CIDR block for VPC"
   type        = string
-  default     = "192.168.0.0/16"
+  default     = ""
 }
 
 variable "public_subnet_cidr" {
   type        = string
   description = "Public Subnet CIDR values"
-  default     = "192.168.11.0/24"
+  default     = ""
 }
 
 variable "private_subnet_cidr" {
   type        = string
   description = "Private Subnet CIDR values"
-  default     = "192.168.21.0/24"
+  default     = ""
 }
 
 variable "allow_ports" {

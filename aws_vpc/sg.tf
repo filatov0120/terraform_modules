@@ -24,7 +24,7 @@ resource "aws_security_group_rule" "access_from_vpc" {
   from_port         = 0
   to_port           = 0
   protocol          = "all"
-  cidr_blocks       = ["192.168.0.0/16"]
+  cidr_blocks       = [var.cidr_vpc]
 }
 
 resource "aws_security_group_rule" "access_to_anywhere" {

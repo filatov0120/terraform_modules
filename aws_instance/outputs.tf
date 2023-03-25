@@ -5,7 +5,7 @@ output "instance_id" {
 
 output "elastic_ip" {
   description = "Elastic IP for instance"
-  value       = aws_eip.this.id
+  value       = aws_eip.this.public_ip
 }
 
 output "instance_public_ip" {
@@ -16,4 +16,9 @@ output "instance_public_ip" {
 output "instance_public_url" {
   description = "Public URL address of EC2 instance"
   value       = aws_instance.this.public_dns
+}
+
+output "instance_public_url_eip" {
+  description = "Public URL address of EC2 instance"
+  value       = aws_eip.this.public_dns
 }
