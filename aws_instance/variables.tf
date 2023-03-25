@@ -8,6 +8,11 @@ variable "azs" {
   default     = "us-east-1a"
 }
 
+variable "ssh_key" {
+  description = "SSH key pair for instance"
+  type        = string
+}
+
 variable "ami" {
   description = "ami for instance"
   type        = string
@@ -58,9 +63,4 @@ variable "instance_tags" {
     Project     = "OMOMO"
     Environment = "DEV"
   }
-}
-
-variable "ssh_key" {
-  description = "SSH key pair for instance"
-  type        = string
 }
