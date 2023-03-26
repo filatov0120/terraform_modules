@@ -4,8 +4,6 @@ resource "aws_security_group" "this" {
   vpc_id      = aws_vpc.main.id
 }
 
-
-
 resource "aws_security_group_rule" "access_from_internet" {
   security_group_id = aws_security_group.this.id
   type              = "ingress"

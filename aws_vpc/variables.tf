@@ -42,11 +42,11 @@ variable "cidr_vpc" {
   default     = ""
 }
 
-# variable "public_subnet_cidr" {
-#   type        = string
-#   description = "Public Subnet CIDR values"
-#   default     = ""
-# }
+variable "public_subnet_cidr" {
+  type        = string
+  description = "Public Subnet CIDR values"
+  default     = ""
+}
 
 variable "private_subnet_cidr" {
   type        = string
