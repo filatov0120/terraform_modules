@@ -2,7 +2,7 @@ resource "aws_instance" "this" {
   instance_type     = var.instance_type
   ami               = var.ami
   availability_zone = var.azs
-  security_groups   = [var.security_group_id]
+  security_groups   = [aws_security_group.this.id]
   subnet_id         = var.subnet_id
   key_name          = var.ssh_key
 
@@ -24,4 +24,3 @@ resource "aws_eip" "this" {
     Name = "${var.instance_name}-EIP"
   })
 }
-

@@ -12,28 +12,19 @@ variable "azs" {
 
 variable "app_name" {
   description = "Application name"
-  default     = "blaize_app"
+  default     = ""
 }
 
 variable "env" {
   description = "Name of env"
   type        = string
-  default     = "DEV"
+  default     = ""
 }
 
 variable "proj_name" {
   description = "Name of project"
   type        = string
-  default     = "OMOMO"
-}
-
-variable "vpc_tags" {
-  description = "Common tags to apply to all resourses"
-  type        = map(any)
-  default = {
-    Project     = "OMOMO"
-    Environment = "DEV"
-  }
+  default     = ""
 }
 
 variable "cidr_vpc" {
@@ -54,12 +45,11 @@ variable "private_subnet_cidr" {
   default     = ""
 }
 
-variable "allow_ports" {
-  description = "List of ports to open for server"
-  type        = list(any)
-  default = [
-    "80",
-    "443",
-    "22"
-  ]
+variable "vpc_tags" {
+  description = "Common tags to apply to all resourses"
+  type        = map(any)
+  default = {
+    Project     = ""
+    Environment = ""
+  }
 }

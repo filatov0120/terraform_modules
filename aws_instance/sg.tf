@@ -1,7 +1,7 @@
 resource "aws_security_group" "this" {
-  name        = "${var.app_name}-sg"
-  description = "Security Group for test ${var.app_name}"
-  vpc_id      = aws_vpc.main.id
+  name        = "${var.instance_name}-sg"
+  description = "Security Group for instance"
+  vpc_id      = var.vpc_id
 }
 
 resource "aws_security_group_rule" "access_from_internet" {

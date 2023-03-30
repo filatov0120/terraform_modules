@@ -47,20 +47,35 @@ variable "instance_profile" {
   default = null
 }
 
-variable "security_group_id" {
-  description = "Security group ID"
+variable "vpc_id" {
+  description = "VPC for instance"
+}
+
+variable "cidr_vpc" {
+  description = "VPC_cidr_block"
 }
 
 variable "subnet_id" {
   description = "Subnet ID for instance"
 }
 
+variable "allow_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "project_name" {
+  description = "Project name"
+  default     = ""
+}
+
 variable "instance_tags" {
   description = "Common tags to apply resourses"
   type        = map(any)
   default = {
-    Name        = "Host"
-    Project     = "OMOMO"
-    Environment = "DEV"
+    Name        = ""
+    Project     = ""
+    Environment = ""
   }
 }
