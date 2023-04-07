@@ -3,19 +3,12 @@ variable "azs" {
     default     = "us-east-1a"  
 }
 
+variable "type" {
+  description = "Type of storage"  
+}
+
 variable "size" {
     description = "Storage size"
-}
-
-variable "app_name" {
-  description = "Application name"
-  default     = ""
-}
-
-variable "env" {
-  description = "Name of env"
-  type        = string
-  default     = ""
 }
 
 variable "proj_name" {
