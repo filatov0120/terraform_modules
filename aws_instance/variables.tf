@@ -27,7 +27,7 @@ variable "instance_name" {
 variable "instance_type" {
   description = "My instance's type"
   type        = string
-  default     = "t2.micro"
+  default     = ""
 }
 
 variable "root_block_size" {
