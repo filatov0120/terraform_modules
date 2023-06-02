@@ -59,7 +59,13 @@ variable "subnet_id" {
   description = "Subnet ID for instance"
 }
 
-variable "allow_ports" {
+variable "allow_tcp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "allow_udp_ports" {
   description = "List of ports to open for server"
   type        = list(any)
   default     = []
