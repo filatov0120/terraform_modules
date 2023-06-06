@@ -17,7 +17,6 @@ resource "aws_subnet" "private_subnet" {
   cidr_block        = var.private_subnet_cidr
   availability_zone = var.azs
   tags              = merge(var.vpc_tags, { Name = "${var.proj_name}_private_subnet" })
-
 }
 
 resource "aws_internet_gateway" "gw" {
