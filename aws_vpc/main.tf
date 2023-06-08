@@ -4,14 +4,6 @@ resource "aws_vpc" "main" {
   tags                 = merge(var.vpc_tags, { Name = "${var.proj_name}-VPC" })
 }
 
-resource "aws_subnet" "public_subnet" {
-  vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.public_subnet_cidr
-  map_public_ip_on_launch = true
-  availability_zone       = var.azs
-  tags                    = merge(var.vpc_tags, { Name = "${var.proj_name}_public_subnet" })
-}
-
 resource "aws_subnet" "private_subnet" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.private_subnet_cidr
@@ -31,10 +23,10 @@ resource "aws_route_table" "igw_rt" {
     gateway_id = aws_internet_gateway.gw.id
   }
 
-  tags = merge(var.vpc_tags, { Name = "RT_to_igw_for_${var.proj_name}" })
+  tags = merge(var.vpc_tags, { Name = "${var.proj_name}_rt_to_igw_" })
 }
 
 resource "aws_route_table_association" "subnet_asso" {
-  subnet_id      = aws_subnet.public_subnet.id
+  subnet_id      = aws_subnet.private_subnet.id
   route_table_id = aws_route_table.igw_rt.id
 }

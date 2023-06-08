@@ -1,17 +1,12 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+  default     = ""
 }
 
 variable "azs" {
   type        = string
   description = "Availability Zones list"
-  default     = "us-east-1a"
-}
-
-variable "app_name" {
-  description = "Application name"
   default     = ""
 }
 
@@ -30,12 +25,6 @@ variable "proj_name" {
 variable "cidr_vpc" {
   description = "CIDR block for VPC"
   type        = string
-  default     = ""
-}
-
-variable "public_subnet_cidr" {
-  type        = string
-  description = "Public Subnet CIDR values"
   default     = ""
 }
 

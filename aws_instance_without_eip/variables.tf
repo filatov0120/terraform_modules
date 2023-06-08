@@ -1,11 +1,11 @@
 variable "region" {
-  default = "us-east-1"
+  default = ""
 }
 
 variable "azs" {
   type        = string
   description = "Availability Zones list"
-  default     = "us-east-1a"
+  default     = ""
 }
 
 variable "ssh_key" {
@@ -21,7 +21,7 @@ variable "ami" {
 variable "instance_name" {
   description = "My instance's name"
   type        = string
-  default     = "Blaize_Host"
+  default     = ""
 }
 
 variable "instance_type" {

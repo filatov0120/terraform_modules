@@ -1,6 +1,6 @@
 variable "azs" {
     description = "Availability Zones list"
-    default     = "us-east-1a"  
+    default     = ""  
 }
 
 variable "type" {
