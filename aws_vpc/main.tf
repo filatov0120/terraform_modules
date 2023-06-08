@@ -23,7 +23,7 @@ resource "aws_route_table" "igw_rt" {
     gateway_id = aws_internet_gateway.gw.id
   }
 
-  tags = merge(var.vpc_tags, { Name = "${var.proj_name}_rt_to_igw_" })
+  tags = merge(var.vpc_tags, { Name = "${var.proj_name}_rt_to_igw" })
 }
 
 resource "aws_route_table_association" "subnet_asso" {
