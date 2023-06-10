@@ -44,7 +44,7 @@ resource "aws_security_group_rule" "access_udp_range_from_internet" {
   from_port         = element(var.start_udp_ports, count.index)
   to_port           = element(var.end_udp_ports, count.index)
   description       = "Allow from internet to tcp port range"
-  protocol          = "tcp"
+  protocol          = "udp"
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
