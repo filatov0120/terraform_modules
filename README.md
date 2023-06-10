@@ -1,2 +1,2 @@
 terraform_modules
-"aws_vpc" includ creation vpc, subgroups (private and public), internet gateway, routing tables for private and public subnets. Module create security group with ingress and egress rules too. 
+EC2 instance with EIP and without EIP, EBS, VPC
