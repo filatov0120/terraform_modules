@@ -26,7 +26,7 @@ resource "aws_security_group_rule" "access_udp_from_internet" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-resource "aws_security_group_rule" "access_tcp_from_internet" {
+resource "aws_security_group_rule" "access_tcp_range_from_internet" {
   security_group_id = aws_security_group.this.id
   type              = "ingress"
   count             = length(var.start_tcp_ports)
@@ -37,7 +37,7 @@ resource "aws_security_group_rule" "access_tcp_from_internet" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
-resource "aws_security_group_rule" "access_tcp_from_internet" {
+resource "aws_security_group_rule" "access_udp_range_from_internet" {
   security_group_id = aws_security_group.this.id
   type              = "ingress"
   count             = length(var.start_udp_ports)
