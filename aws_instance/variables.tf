@@ -71,6 +71,30 @@ variable "allow_udp_ports" {
   default     = []
 }
 
+variable "start_tcp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "end_tcp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "start_udp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "end_udp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
 variable "project_name" {
   description = "Project name"
   default     = ""

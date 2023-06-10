@@ -21,13 +21,13 @@ variable "ami" {
 variable "instance_name" {
   description = "My instance's name"
   type        = string
-  default     = ""
+  default     = "Blaize_Host"
 }
 
 variable "instance_type" {
   description = "My instance's type"
   type        = string
-  default     = "t2.micro"
+  default     = ""
 }
 
 variable "root_block_size" {
@@ -66,6 +66,30 @@ variable "allow_tcp_ports" {
 }
 
 variable "allow_udp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "start_tcp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "end_tcp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "start_udp_ports" {
+  description = "List of ports to open for server"
+  type        = list(any)
+  default     = []
+}
+
+variable "end_udp_ports" {
   description = "List of ports to open for server"
   type        = list(any)
   default     = []
