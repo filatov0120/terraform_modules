@@ -21,7 +21,7 @@ variable "ami" {
 variable "instance_name" {
   description = "My instance's name"
   type        = string
-  default     = "Blaize_Host"
+  default     = ""
 }
 
 variable "instance_type" {
