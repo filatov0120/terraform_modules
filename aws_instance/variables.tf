@@ -100,6 +100,10 @@ variable "project_name" {
   default     = ""
 }
 
+variable "user_data" {
+  description = "User data for instance"
+}
+
 variable "instance_tags" {
   description = "Common tags to apply resourses"
   type        = map(any)

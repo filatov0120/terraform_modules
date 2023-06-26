@@ -5,6 +5,11 @@ resource "aws_instance" "this" {
   vpc_security_group_ids = [aws_security_group.this.id]
   subnet_id              = var.subnet_id
   key_name               = var.ssh_key
+  user_data              = var.user_data
+
+  lifecycle {
+    ignore_changes = [user_data]
+  }
 
   root_block_device {
     volume_size = var.root_block_size
