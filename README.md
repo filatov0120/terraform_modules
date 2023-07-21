@@ -1,2 +1,2 @@
-terraform_modules ![icon](<img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/filatov0120/terraform_modules">)<br>
+terraform_modules ![GitHub release (with filter)](https://img.shields.io/github/v/release/filatov0120/terraform_modules)
 EC2 instance with EIP and without EIP, EBS, VPC
