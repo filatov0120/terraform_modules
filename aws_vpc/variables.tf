@@ -1,44 +1,46 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = ""
+  default     = "eu-central-1"
 }
 
 variable "azs" {
-  type        = string
+  type        = list(any)
   description = "Availability Zones list"
-  default     = ""
 }
 
 variable "env" {
   description = "Name of env"
   type        = string
-  default     = ""
 }
 
-variable "proj_name" {
+variable "project_name" {
   description = "Name of project"
   type        = string
-  default     = ""
+
+  validation {
+    condition     = length(var.project_name) > 3
+    error_message = "The project_name value must be set and more than 3 symbols."
+  }
 }
 
 variable "cidr_vpc" {
   description = "CIDR block for VPC"
   type        = string
-  default     = ""
 }
 
-variable "public_subnet_cidr" {
-  type        = string
+variable "public_subnet_cidrs" {
+  type        = list(string)
   description = "Public Subnet CIDR values"
-  default     = ""
 }
 
-variable "vpc_tags" {
-  description = "Common tags to apply to all resourses"
-  type        = map(any)
-  default = {
-    Project     = ""
-    Environment = ""
-  }
+variable "private_subnet_cidrs" {
+  type        = list(string)
+  description = "Private Subnet CIDR values"
+}
+
+variable "nat_create" {
+  description = "Is create a NAT Gateway?"
+  type        = bool
+  default     = false
 }

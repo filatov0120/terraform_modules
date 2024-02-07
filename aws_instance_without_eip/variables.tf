@@ -1,11 +1,10 @@
 variable "region" {
-  default = ""
+  default = "eu-central-1"
 }
 
 variable "azs" {
   type        = string
   description = "Availability Zones list"
-  default     = ""
 }
 
 variable "ssh_key" {
@@ -21,13 +20,15 @@ variable "ami" {
 variable "instance_name" {
   description = "My instance's name"
   type        = string
-  default     = "Blaize_Host"
 }
 
 variable "instance_type" {
   description = "My instance's type"
   type        = string
-  default     = ""
+  validation {
+    condition     = length(var.instance_type) > 0
+    error_message = "The project_name value must be."
+  }
 }
 
 variable "root_block_size" {
@@ -39,7 +40,7 @@ variable "root_block_size" {
 variable "root_volume_type" {
   description = "Storage type"
   type        = string
-  default     = "gp2"
+  default     = "gp3"
 }
 
 variable "instance_profile" {
@@ -97,15 +98,17 @@ variable "end_udp_ports" {
 
 variable "project_name" {
   description = "Project name"
-  default     = ""
+  validation {
+    condition     = length(var.project_name) > 3
+    error_message = "The project_name value must be set and more than 3 symbols."
+  }
 }
 
-variable "instance_tags" {
-  description = "Common tags to apply resourses"
-  type        = map(any)
-  default = {
-    Name        = ""
-    Project     = ""
-    Environment = ""
-  }
+variable "env" {
+  description = "env"
+  type        = string
+}
+
+variable "user_data" {
+  description = "User data for instance"
 }

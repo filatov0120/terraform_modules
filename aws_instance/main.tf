@@ -16,16 +16,22 @@ resource "aws_instance" "this" {
     volume_type = var.root_volume_type
   }
 
-  tags = merge(var.instance_tags, {
-    Name = var.instance_name
-  })
+  tags = {
+    Name        = "${var.project_name}-${var.env}-${var.instance_name}"
+    Project     = var.project_name,
+    Environment = var.env
+    Terraform   = true
+  }
 }
 
 resource "aws_eip" "this" {
   instance = aws_instance.this.id
   domain   = "vpc"
 
-  tags = merge(var.instance_tags, {
-    Name = "${var.instance_name}-EIP"
-  })
+  tags = {
+    Name        = "${var.instance_name}-EIP"
+    Project     = var.project_name,
+    Environment = var.env
+    Terraform   = true
+  }
 }
