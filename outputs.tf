@@ -22,6 +22,11 @@ output "nat_eip" {
   value = module.vpc.nat_eip
 }
 
+output "rds_endpoint" {
+  description = "Endpoint of the RDS instance"
+  value       = module.rds_postgres.rds_endpoint
+}
+
 # output "server1_ip" {
 #   value = module.server1.elastic_ip
 # }

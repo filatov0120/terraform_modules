@@ -1,6 +1,7 @@
 resource "aws_security_group" "this" {
-  description = "Security Group for instance"
-  vpc_id      = var.vpc_id
+  # description = "Security Group for instance"
+  name   = "${var.project_name}-${var.env}-${var.instance_name}"
+  vpc_id = var.vpc_id
 
   tags = {
     Name        = "${var.project_name}-${var.env}-sg"

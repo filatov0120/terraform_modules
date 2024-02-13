@@ -5,7 +5,7 @@ variable "cidr_vpc" {
 }
 
 variable "nat_create" {
-  description = "Is create a NAT Gateway?."
+  description = "Is create a NAT Gateway?"
   type        = bool
   default     = false
 }
