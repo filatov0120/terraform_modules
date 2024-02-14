@@ -1,11 +1,10 @@
 variable "region" {
-  default = ""
+  default = "eu-central-1"
 }
 
 variable "azs" {
-  type        = string
   description = "Availability Zones list"
-  default     = ""
+  type        = string
 }
 
 variable "ssh_key" {
@@ -21,13 +20,15 @@ variable "ami" {
 variable "instance_name" {
   description = "My instance's name"
   type        = string
-  default     = ""
 }
 
 variable "instance_type" {
   description = "My instance's type"
   type        = string
-  default     = ""
+  validation {
+    condition     = length(var.instance_type) > 0
+    error_message = "The project_name value must be."
+  }
 }
 
 variable "root_block_size" {
@@ -39,7 +40,7 @@ variable "root_block_size" {
 variable "root_volume_type" {
   description = "Storage type"
   type        = string
-  default     = "gp2"
+  default     = "gp3"
 }
 
 variable "instance_profile" {
@@ -49,10 +50,12 @@ variable "instance_profile" {
 
 variable "vpc_id" {
   description = "VPC for instance"
+  type        = string
 }
 
 variable "cidr_vpc" {
   description = "VPC_cidr_block"
+  type        = string
 }
 
 variable "subnet_id" {
@@ -61,55 +64,47 @@ variable "subnet_id" {
 
 variable "allow_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "allow_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "start_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "end_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "start_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "end_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "project_name" {
   description = "Project name"
-  default     = ""
+  validation {
+    condition     = length(var.project_name) > 3
+    error_message = "The project_name value must be set and more than 3 symbols."
+  }
+}
+
+variable "env" {
+  description = "env"
+  type        = string
 }
 
 variable "user_data" {
   description = "User data for instance"
-}
-
-variable "instance_tags" {
-  description = "Common tags to apply resourses"
-  type        = map(any)
-  default = {
-    Name        = ""
-    Project     = ""
-    Environment = ""
-  }
 }

@@ -1,7 +1,14 @@
 resource "aws_security_group" "this" {
-  name        = "${var.instance_name}-sg"
-  description = "Security Group for instance"
-  vpc_id      = var.vpc_id
+  # description = "Security Group for instance"
+  name   = "${var.project_name}-${var.env}-${var.instance_name}"
+  vpc_id = var.vpc_id
+
+  tags = {
+    Name        = "${var.project_name}-${var.env}-sg"
+    Project     = var.project_name,
+    Environment = var.env
+    Terraform   = true
+  }
 }
 
 resource "aws_security_group_rule" "access_tcp_from_internet" {
