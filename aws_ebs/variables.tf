@@ -1,5 +1,6 @@
 variable "azs" {
   description = "Availability Zones list"
+  type        = string
 }
 
 variable "env" {
@@ -27,6 +28,7 @@ variable "type" {
 
 variable "size" {
   description = "Storage size"
+  type        = string
 }
 
 variable "instance_id" {

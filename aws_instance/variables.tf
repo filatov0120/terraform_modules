@@ -3,8 +3,8 @@ variable "region" {
 }
 
 variable "azs" {
-  type        = string
   description = "Availability Zones list"
+  type        = string
 }
 
 variable "ssh_key" {
@@ -50,10 +50,12 @@ variable "instance_profile" {
 
 variable "vpc_id" {
   description = "VPC for instance"
+  type        = string
 }
 
 variable "cidr_vpc" {
   description = "VPC_cidr_block"
+  type        = string
 }
 
 variable "subnet_id" {
@@ -62,38 +64,32 @@ variable "subnet_id" {
 
 variable "allow_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "allow_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "start_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "end_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "start_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "end_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "project_name" {

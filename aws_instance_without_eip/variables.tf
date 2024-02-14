@@ -1,5 +1,7 @@
 variable "region" {
-  default = "eu-central-1"
+  description = "AWS Region"
+  type        = string
+  default     = "eu-central-1"
 }
 
 variable "azs" {
@@ -50,54 +52,52 @@ variable "instance_profile" {
 
 variable "vpc_id" {
   description = "VPC for instance"
+  type        = string
 }
 
 variable "cidr_vpc" {
   description = "VPC_cidr_block"
+  type        = string
 }
 
 variable "subnet_id" {
   description = "Subnet ID for instance"
+  type        = string
 }
 
 variable "allow_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "allow_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "start_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "end_tcp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "start_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "end_udp_ports" {
   description = "List of ports to open for server"
-  type        = list(any)
-  default     = []
+  type        = list(string)
 }
 
 variable "project_name" {
   description = "Project name"
+  type        = string
   validation {
     condition     = length(var.project_name) > 3
     error_message = "The project_name value must be set and more than 3 symbols."
