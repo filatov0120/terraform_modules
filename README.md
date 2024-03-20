@@ -26,17 +26,17 @@ Root folder consist an example files for simple infrastructure creating.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_amplify"></a> [amplify](#module\_amplify) | ./aws_amplify | n/a |
-| <a name="module_certificate_manager"></a> [certificate\_manager](#module\_certificate\_manager) | ./aws_certificate_manager | n/a |
-| <a name="module_ebs_volume"></a> [ebs\_volume](#module\_ebs\_volume) | git@github.com:Filicipa/terraform_modules.git//aws_ebs | v1.2.0 |
-| <a name="module_ecs-service"></a> [ecs-service](#module\_ecs-service) | ./aws_ecs_service | n/a |
-| <a name="module_ecs-weway-cluster"></a> [ecs-weway-cluster](#module\_ecs-weway-cluster) | ./aws_ecs_cluster | n/a |
-| <a name="module_iam_user"></a> [iam\_user](#module\_iam\_user) | ./aws_iam_user | n/a |
-| <a name="module_load_balancer"></a> [load\_balancer](#module\_load\_balancer) | ./aws_loadbalancer | n/a |
-| <a name="module_rds_postgres"></a> [rds\_postgres](#module\_rds\_postgres) | ./aws_rds | n/a |
-| <a name="module_task-definition"></a> [task-definition](#module\_task-definition) | ./aws_task_definition | n/a |
-| <a name="module_test_server"></a> [test\_server](#module\_test\_server) | git@github.com:Filicipa/terraform_modules.git//aws_inctance | v1.2.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | ./aws_vpc | n/a |
+| <a name="module_amplify"></a> [amplify](#module\_amplify) | git@github.com:filatov0120/terraform_modules.git//aws_amplify | v1.3.0 |
+| <a name="module_certificate_manager"></a> [certificate\_manager](#module\_certificate\_manager) | git@github.com:filatov0120/terraform_modules.git//aws_certificate_manager | v1.3.0 |
+| <a name="module_ebs_volume"></a> [ebs\_volume](#module\_ebs\_volume) | git@github.com:Filicipa/terraform_modules.git//aws_ebs | v1.3.0 |
+| <a name="module_ecs-cluster"></a> [ecs-cluster](#module\_ecs-cluster) | git@github.com:filatov0120/terraform_modules.git//aws_ecs_cluster | v1.3.0 |
+| <a name="module_ecs-service"></a> [ecs-service](#module\_ecs-service) | git@github.com:filatov0120/terraform_modules.git//main_ecs_service | v1.3.0 |
+| <a name="module_iam_user"></a> [iam\_user](#module\_iam\_user) | git@github.com:filatov0120/terraform_modules.git//main_iam_user | v1.3.0 |
+| <a name="module_load_balancer"></a> [load\_balancer](#module\_load\_balancer) | git@github.com:filatov0120/terraform_modules.git//aws_loadbalancer | v1.3.0 |
+| <a name="module_rds_postgres"></a> [rds\_postgres](#module\_rds\_postgres) | git@github.com:filatov0120/terraform_modules.git//aws_rds | v1.3.0 |
+| <a name="module_task-definition"></a> [task-definition](#module\_task-definition) | git@github.com:filatov0120/terraform_modules.git//aws_task_definition | v1.3.0 |
+| <a name="module_test_server"></a> [test\_server](#module\_test\_server) | git@github.com:filatov0120/terraform_modules.git//aws_inctance | v1.3.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | git@github.com:filatov0120/terraform_modules.git//aws_vpc | v1.3.0 |
 
 ## Resources
 
