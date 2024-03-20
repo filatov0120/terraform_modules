@@ -1,5 +1,5 @@
 module "vpc" {
-  source               = "./aws_vpc"
+  source               = "git@github.com:filatov0120/terraform_modules.git//aws_vpc?ref=v1.3.0"
   nat_create           = var.nat_create
   azs                  = data.aws_availability_zones.available.names
   cidr_vpc             = var.cidr_vpc
