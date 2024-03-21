@@ -1,5 +1,5 @@
 module "test_server" {
-  source           = "git@github.com:filatov0120/terraform_modules.git//aws_inctance?ref=v1.3.0"
+  source           = "git@github.com:filatov0120/terraform_modules.git//aws_instance?ref=v1.3.0"
   depends_on       = [module.vpc]
   ami              = data.aws_ami.ubuntu_server.id
   azs              = element(data.aws_availability_zones.available.names, 0)
