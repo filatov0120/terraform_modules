@@ -35,7 +35,7 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="module_load_balancer"></a> [load\_balancer](#module\_load\_balancer) | git@github.com:filatov0120/terraform_modules.git//aws_loadbalancer | v1.3.0 |
 | <a name="module_rds_postgres"></a> [rds\_postgres](#module\_rds\_postgres) | git@github.com:filatov0120/terraform_modules.git//aws_rds | v1.3.0 |
 | <a name="module_task-definition"></a> [task-definition](#module\_task-definition) | git@github.com:filatov0120/terraform_modules.git//aws_task_definition | v1.3.0 |
-| <a name="module_test_server"></a> [test\_server](#module\_test\_server) | git@github.com:filatov0120/terraform_modules.git//aws_inctance | v1.3.0 |
+| <a name="module_test_server"></a> [test\_server](#module\_test\_server) | git@github.com:filatov0120/terraform_modules.git//aws_instance | v1.3.0 |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | git@github.com:filatov0120/terraform_modules.git//aws_vpc | v1.3.0 |
 
 ## Resources
