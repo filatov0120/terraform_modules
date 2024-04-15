@@ -4,6 +4,13 @@
 - EBS volume
 - VPC and subnet in multi az. NAT optional
 - RDS instance
+- ECR
+- ECS cluster/service/task definition
+- Amplify
+- ACM
+- ALB
+- IAM user
+- IAM role
 
 Root folder consist an example files for simple infrastructure creating.
 
