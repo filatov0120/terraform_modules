@@ -24,3 +24,7 @@ data "terraform_remote_state" "shared" {
     region = "eu-central-1"
   }
 }
+
+data "aws_iam_policy" "ecsTask" {
+  name = "AmazonECSTaskExecutionRolePolicy"
+}
