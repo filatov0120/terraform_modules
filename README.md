@@ -30,7 +30,8 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="module_certificate_manager"></a> [certificate\_manager](#module\_certificate\_manager) | git@github.com:filatov0120/terraform_modules.git//aws_certificate_manager | v1.3.0 |
 | <a name="module_ebs_volume"></a> [ebs\_volume](#module\_ebs\_volume) | git@github.com:Filicipa/terraform_modules.git//aws_ebs | v1.3.0 |
 | <a name="module_ecs-cluster"></a> [ecs-cluster](#module\_ecs-cluster) | git@github.com:filatov0120/terraform_modules.git//aws_ecs_cluster | v1.3.0 |
-| <a name="module_ecs-service"></a> [ecs-service](#module\_ecs-service) | git@github.com:filatov0120/terraform_modules.git//main_ecs_service | v1.3.0 |
+| <a name="module_ecs-service"></a> [ecs-service](#module\_ecs-service) | git@github.com:filatov0120/terraform_modules.git//aws_ecs_service | v1.3.0 |
+| <a name="module_iam_role"></a> [iam\_role](#module\_iam\_role) | git@github.com:filatov0120/terraform_modules.git//aws_iam_role | v1.3.0 |
 | <a name="module_iam_user"></a> [iam\_user](#module\_iam\_user) | git@github.com:filatov0120/terraform_modules.git//main_iam_user | v1.3.0 |
 | <a name="module_load_balancer"></a> [load\_balancer](#module\_load\_balancer) | git@github.com:filatov0120/terraform_modules.git//aws_loadbalancer | v1.3.0 |
 | <a name="module_rds_postgres"></a> [rds\_postgres](#module\_rds\_postgres) | git@github.com:filatov0120/terraform_modules.git//aws_rds | v1.3.0 |
@@ -44,6 +45,7 @@ Root folder consist an example files for simple infrastructure creating.
 |------|------|
 | [aws_ami.ubuntu_server](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
 | [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
+| [aws_iam_policy.ecsTask](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy) | data source |
 | [terraform_remote_state.shared](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs
@@ -80,6 +82,7 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="input_frontend_environment_variables"></a> [frontend\_environment\_variables](#input\_frontend\_environment\_variables) | n/a | `map(string)` | n/a | yes |
 | <a name="input_github_repository"></a> [github\_repository](#input\_github\_repository) | GitHub repositoty URL | `string` | n/a | yes |
 | <a name="input_health_check_path"></a> [health\_check\_path](#input\_health\_check\_path) | n/a | `string` | n/a | yes |
+| <a name="input_iam_role_name"></a> [iam\_role\_name](#input\_iam\_role\_name) | IAM role name | `string` | n/a | yes |
 | <a name="input_iam_user"></a> [iam\_user](#input\_iam\_user) | IAM user name | `string` | n/a | yes |
 | <a name="input_image_tag_mutability"></a> [image\_tag\_mutability](#input\_image\_tag\_mutability) | n/a | `string` | n/a | yes |
 | <a name="input_inst1_name"></a> [inst1\_name](#input\_inst1\_name) | Name for instances | `string` | `"test"` | no |
@@ -125,6 +128,7 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="output_avz"></a> [avz](#output\_avz) | n/a |
 | <a name="output_avz_ids"></a> [avz\_ids](#output\_avz\_ids) | n/a |
 | <a name="output_ecr_url"></a> [ecr\_url](#output\_ecr\_url) | The URL of the repository (in the form aws\_account\_id.dkr.ecr.region.amazonaws.com/repositoryName) |
+| <a name="output_iam_role_arn"></a> [iam\_role\_arn](#output\_iam\_role\_arn) | n/a |
 | <a name="output_nat_eip"></a> [nat\_eip](#output\_nat\_eip) | n/a |
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | n/a |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | n/a |
