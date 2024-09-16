@@ -1,5 +1,5 @@
 module "rds_postgres" {
-  source                      = "git@github.com:filatov0120/terraform_modules.git//aws_rds?ref=v1.3.0"
+  source                      = "git@github.com:filatov0120/terraform_modules.git//aws_rds?ref=v1.5.0"
   apply_immediately           = var.apply_immediately
   multi_az                    = var.multi_az
   cidr_vpc                    = var.cidr_vpc
