@@ -34,19 +34,20 @@ Root folder consist an example files for simple infrastructure creating.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_amplify"></a> [amplify](#module\_amplify) | git@github.com:filatov0120/terraform_modules.git//aws_amplify | v1.3.0 |
-| <a name="module_certificate_manager"></a> [certificate\_manager](#module\_certificate\_manager) | git@github.com:filatov0120/terraform_modules.git//aws_certificate_manager | v1.3.0 |
-| <a name="module_ebs_volume"></a> [ebs\_volume](#module\_ebs\_volume) | git@github.com:Filicipa/terraform_modules.git//aws_ebs | v1.3.0 |
-| <a name="module_ecs-cluster"></a> [ecs-cluster](#module\_ecs-cluster) | git@github.com:filatov0120/terraform_modules.git//aws_ecs_cluster | v1.3.0 |
-| <a name="module_ecs-service"></a> [ecs-service](#module\_ecs-service) | git@github.com:filatov0120/terraform_modules.git//aws_ecs_service | v1.3.0 |
-| <a name="module_elasticache"></a> [elasticache](#module\_elasticache) | git@github.com:filatov0120/terraform_modules.git//aws_elasticache | v1.3.0 |
-| <a name="module_iam_role"></a> [iam\_role](#module\_iam\_role) | git@github.com:filatov0120/terraform_modules.git//aws_iam_role | v1.3.0 |
-| <a name="module_iam_user"></a> [iam\_user](#module\_iam\_user) | git@github.com:filatov0120/terraform_modules.git//main_iam_user | v1.3.0 |
-| <a name="module_load_balancer"></a> [load\_balancer](#module\_load\_balancer) | git@github.com:filatov0120/terraform_modules.git//aws_loadbalancer | v1.3.0 |
-| <a name="module_rds_postgres"></a> [rds\_postgres](#module\_rds\_postgres) | git@github.com:filatov0120/terraform_modules.git//aws_rds | v1.3.0 |
-| <a name="module_task-definition"></a> [task-definition](#module\_task-definition) | git@github.com:filatov0120/terraform_modules.git//aws_task_definition | v1.3.0 |
-| <a name="module_test_server"></a> [test\_server](#module\_test\_server) | git@github.com:filatov0120/terraform_modules.git//aws_instance | v1.3.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | git@github.com:filatov0120/terraform_modules.git//aws_vpc | v1.3.0 |
+| <a name="module_amplify"></a> [amplify](#module\_amplify) | git@github.com:filatov0120/terraform_modules.git//aws_amplify | v1.5.0 |
+| <a name="module_certificate_manager"></a> [certificate\_manager](#module\_certificate\_manager) | git@github.com:filatov0120/terraform_modules.git//aws_certificate_manager | v1.5.0 |
+| <a name="module_ebs_volume"></a> [ebs\_volume](#module\_ebs\_volume) | git@github.com:Filicipa/terraform_modules.git//aws_ebs | v1.5.0 |
+| <a name="module_ecr-repo"></a> [ecr-repo](#module\_ecr-repo) | git@github.com:filatov0120/terraform_modules.git//aws_ecr | v1.5.0 |
+| <a name="module_ecs-cluster"></a> [ecs-cluster](#module\_ecs-cluster) | git@github.com:filatov0120/terraform_modules.git//aws_ecs_cluster | v1.5.0 |
+| <a name="module_ecs-service"></a> [ecs-service](#module\_ecs-service) | git@github.com:filatov0120/terraform_modules.git//aws_ecs_service | v1.5.0 |
+| <a name="module_elasticache"></a> [elasticache](#module\_elasticache) | git@github.com:filatov0120/terraform_modules.git//aws_elasticache | v1.5.0 |
+| <a name="module_iam_role"></a> [iam\_role](#module\_iam\_role) | git@github.com:filatov0120/terraform_modules.git//aws_iam_role | v1.5.0 |
+| <a name="module_iam_user"></a> [iam\_user](#module\_iam\_user) | git@github.com:filatov0120/terraform_modules.git//main_iam_user | v1.5.0 |
+| <a name="module_load_balancer"></a> [load\_balancer](#module\_load\_balancer) | git@github.com:filatov0120/terraform_modules.git//aws_loadbalancer | v1.5.0 |
+| <a name="module_rds_postgres"></a> [rds\_postgres](#module\_rds\_postgres) | git@github.com:filatov0120/terraform_modules.git//aws_rds | v1.5.0 |
+| <a name="module_task-definition"></a> [task-definition](#module\_task-definition) | git@github.com:filatov0120/terraform_modules.git//aws_task_definition | v1.5.0 |
+| <a name="module_test_server"></a> [test\_server](#module\_test\_server) | git@github.com:filatov0120/terraform_modules.git//aws_instance | v1.5.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | git@github.com:filatov0120/terraform_modules.git//aws_vpc | v1.5.0 |
 
 ## Resources
 
@@ -83,7 +84,7 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="input_desired_count"></a> [desired\_count](#input\_desired\_count) | n/a | `number` | n/a | yes |
 | <a name="input_dns_prefix_branch"></a> [dns\_prefix\_branch](#input\_dns\_prefix\_branch) | n/a | `string` | n/a | yes |
 | <a name="input_ebs_name"></a> [ebs\_name](#input\_ebs\_name) | EBS name | `string` | `"/dev/sdf"` | no |
-| <a name="input_ecr_repository_name"></a> [ecr\_repository\_name](#input\_ecr\_repository\_name) | n/a | `string` | n/a | yes |
+| <a name="input_ecr_repository_name"></a> [ecr\_repository\_name](#input\_ecr\_repository\_name) | n/a | `list(string)` | n/a | yes |
 | <a name="input_engine"></a> [engine](#input\_engine) | Engine type | `string` | `"postgres"` | no |
 | <a name="input_engine_version"></a> [engine\_version](#input\_engine\_version) | Engine\_version | `string` | `"14.8"` | no |
 | <a name="input_env"></a> [env](#input\_env) | Environment | `string` | `"dev"` | no |
@@ -95,6 +96,7 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="input_health_check_path"></a> [health\_check\_path](#input\_health\_check\_path) | n/a | `string` | n/a | yes |
 | <a name="input_iam_role_name"></a> [iam\_role\_name](#input\_iam\_role\_name) | IAM role name | `string` | n/a | yes |
 | <a name="input_iam_user"></a> [iam\_user](#input\_iam\_user) | IAM user name | `string` | n/a | yes |
+| <a name="input_image_count"></a> [image\_count](#input\_image\_count) | Image count for lifecycle policy | `number` | n/a | yes |
 | <a name="input_image_tag_mutability"></a> [image\_tag\_mutability](#input\_image\_tag\_mutability) | n/a | `string` | n/a | yes |
 | <a name="input_inst1_name"></a> [inst1\_name](#input\_inst1\_name) | Name for instances | `string` | `"test"` | no |
 | <a name="input_inst2_name"></a> [inst2\_name](#input\_inst2\_name) | Name for instances | `string` | `""` | no |
