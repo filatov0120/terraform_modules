@@ -1,5 +1,5 @@
 module "elasticache" {
-  source               = "git@github.com:filatov0120/terraform_modules.git//aws_elasticache?ref=v1.3.0"
+  source               = "git@github.com:filatov0120/terraform_modules.git//aws_elasticache?ref=v1.5.0"
   cluster_name         = var.cluster_name
   env                  = var.env
   project_name         = var.project_name
