@@ -1,5 +1,5 @@
 variable "ecr_repository_name" {
-  type = string
+  type = list(string)
 }
 
 variable "scan_on_push" {
@@ -13,4 +13,9 @@ variable "image_tag_mutability" {
 
 variable "force_delete" {
   type = bool
+}
+
+variable "image_count" {
+  description = "Image count for lifecycle policy"
+  type = number
 }
