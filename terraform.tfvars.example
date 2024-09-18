@@ -96,8 +96,8 @@ iam_role_name = "name"
 
 #### Elasticache
 cluster_name         = "test-cluster"
-engine               = "redis"
-engine_version       = "7.1"
+redis_engine         = "redis"
+redis_engine_version = "7.1"
 node_type            = "cache.t4g.micro"
 num_cache_nodes      = 1
 parameter_group_name = ""

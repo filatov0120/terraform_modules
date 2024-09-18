@@ -3,8 +3,8 @@ module "elasticache" {
   cluster_name         = var.cluster_name
   env                  = var.env
   project_name         = var.project_name
-  engine               = var.engine
-  engine_version       = var.engine_version
+  engine               = var.redis_engine
+  engine_version       = var.redis_engine_version
   node_type            = var.node_type
   num_cache_nodes      = var.num_cache_nodes
   parameter_group_name = var.parameter_group_name

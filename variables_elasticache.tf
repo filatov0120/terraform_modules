@@ -3,13 +3,13 @@ variable "cluster_name" {
   type        = string
 }
 
-variable "engine" {
+variable "redis_engine" {
   description = "Cluster engine"
   type        = string
   default     = "redis"
 }
 
-variable "engine_version" {
+variable "redis_engine_version" {
   description = "Engine version"
   type        = string
 }

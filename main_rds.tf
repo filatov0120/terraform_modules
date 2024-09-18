@@ -9,8 +9,8 @@ module "rds_postgres" {
   allow_major_version_upgrade = var.allow_major_version_upgrade
   backup_retention_period     = var.backup_retention_period
   deletion_protection         = var.deletion_protection
-  engine                      = var.engine
-  engine_version              = var.engine_version
+  engine                      = var.rds_engine
+  engine_version              = var.rds_engine_version
   instance_class              = var.instance_class
   publicly_accessible         = var.publicly_accessible
   skip_final_snapshot         = var.skip_final_snapshot

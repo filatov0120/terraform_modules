@@ -1,9 +1,9 @@
 name: Generate terraform READme
 on:
   workflow_dispatch: 
-  # push:
-  #   branches:
-  #     - main
+  push:
+    tags: 
+      - v*.*.*
 jobs:
   docs:
     permissions: write-all
