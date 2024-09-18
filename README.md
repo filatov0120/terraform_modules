@@ -85,8 +85,6 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="input_dns_prefix_branch"></a> [dns\_prefix\_branch](#input\_dns\_prefix\_branch) | n/a | `string` | n/a | yes |
 | <a name="input_ebs_name"></a> [ebs\_name](#input\_ebs\_name) | EBS name | `string` | `"/dev/sdf"` | no |
 | <a name="input_ecr_repository_name"></a> [ecr\_repository\_name](#input\_ecr\_repository\_name) | n/a | `list(string)` | n/a | yes |
-| <a name="input_engine"></a> [engine](#input\_engine) | Engine type | `string` | `"postgres"` | no |
-| <a name="input_engine_version"></a> [engine\_version](#input\_engine\_version) | Engine\_version | `string` | `"14.8"` | no |
 | <a name="input_env"></a> [env](#input\_env) | Environment | `string` | `"dev"` | no |
 | <a name="input_force_delete"></a> [force\_delete](#input\_force\_delete) | n/a | `bool` | n/a | yes |
 | <a name="input_framework"></a> [framework](#input\_framework) | n/a | `string` | n/a | yes |
@@ -105,7 +103,7 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="input_instance_class"></a> [instance\_class](#input\_instance\_class) | Instance\_class | `string` | `"db.t4g.micro"` | no |
 | <a name="input_loadbalancer_name"></a> [loadbalancer\_name](#input\_loadbalancer\_name) | n/a | `string` | n/a | yes |
 | <a name="input_loadbalancer_type"></a> [loadbalancer\_type](#input\_loadbalancer\_type) | n/a | `string` | n/a | yes |
-| <a name="input_max_allocated_storage"></a> [max\_allocated\_storage](#input\_max\_allocated\_storage) | Autoscale stogage amount | `string` | `"0"` | no |
+| <a name="input_max_allocated_storage"></a> [max\_allocated\_storage](#input\_max\_allocated\_storage) | Autoscale storage amount | `string` | `"0"` | no |
 | <a name="input_memory"></a> [memory](#input\_memory) | n/a | `number` | n/a | yes |
 | <a name="input_monitoring_interval"></a> [monitoring\_interval](#input\_monitoring\_interval) | Monitoring interval | `string` | `"0"` | no |
 | <a name="input_multi_az"></a> [multi\_az](#input\_multi\_az) | multi\_az | `bool` | `false` | no |
@@ -118,6 +116,10 @@ Root folder consist an example files for simple infrastructure creating.
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name | `string` | n/a | yes |
 | <a name="input_public_subnet_cidrs"></a> [public\_subnet\_cidrs](#input\_public\_subnet\_cidrs) | Public subnet CIDRs | `list(string)` | <pre>[<br>  "192.168.11.0/24",<br>  "192.168.12.0/24"<br>]</pre> | no |
 | <a name="input_publicly_accessible"></a> [publicly\_accessible](#input\_publicly\_accessible) | Publicly accessible | `bool` | `false` | no |
+| <a name="input_rds_engine"></a> [rds\_engine](#input\_rds\_engine) | Engine type | `string` | `"postgres"` | no |
+| <a name="input_rds_engine_version"></a> [rds\_engine\_version](#input\_rds\_engine\_version) | Engine\_version | `string` | `"14.8"` | no |
+| <a name="input_redis_engine"></a> [redis\_engine](#input\_redis\_engine) | Cluster engine | `string` | `"redis"` | no |
+| <a name="input_redis_engine_version"></a> [redis\_engine\_version](#input\_redis\_engine\_version) | Engine version | `string` | n/a | yes |
 | <a name="input_redis_port"></a> [redis\_port](#input\_redis\_port) | Redis open port | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | AWS region | `string` | `"eu-central-1"` | no |
 | <a name="input_scan_on_push"></a> [scan\_on\_push](#input\_scan\_on\_push) | n/a | `bool` | `false` | no |
