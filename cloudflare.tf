@@ -1,7 +1,7 @@
 resource "cloudflare_record" "backend_server" {
   zone_id = ""
   name    = "backend"
-  value   = module.backend_server.elastic_ip
+  content = module.backend_server.elastic_ip
   type    = "A"
   ttl     = 1
   proxied = true
